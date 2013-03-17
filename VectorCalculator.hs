@@ -80,15 +80,14 @@ lineByPoints2 :: (Num a) => [a] -> [a] -> ([a], [a])
 lineByPoints2 xs ys = if((length xs) == (length ys)) then
                      (xs, vectorSub ys xs)
                      else error "Vectors are not the same size"
-
-outputLine :: ([a],[a]) -> String
-outputLine (x,y) = "l(t) = " ++ (show x) ++ "t(" ++ (show y) ++ ")"
 					
-main :: IO ()
-main = do putStr "Welcome to our Vecotr Calculator\n"
-          --putStr "Our functions are:\n"
-		  --putStr "Operation (useage)"
-		  --putStr "Scalar Multiplication (scaleMult vector constant)\n"
+about = do putStr "Welcome to our Vecotr Calculator\n"
+           putStr "Unless otherwise specified, vectors are in n dimensional space\n"
+           putStr "Our functions are:\nOperation (useage)\n"
+           putStr "Scalar Multiplication (scaleMult vector constant)\n"
+           putStr "Dot Product (dotProd vector1 vector2)\n"
+           putStr "Cross Product using vectors in 3 space (crossProd vector1 vector2)\n"
+           putStr "And equation of a line by two points (lineByPoints2 vector1 vector2)\n"
 		 
 
 
